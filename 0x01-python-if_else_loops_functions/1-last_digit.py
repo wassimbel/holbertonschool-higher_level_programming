@@ -7,7 +7,7 @@ else:
     j = number % 10
 if j > 5:
     print("Last digit of {:d} is {:d} and is greater than 5".format(number, j))
-elif mod == 0:
+elif j == 0:
     print("Last digit of {:d} is {:d} and is 0".format(number, j))
 else:
     print("Last digit of {:d} is {:d} and is less than 6 and not 0".format(number, j))
