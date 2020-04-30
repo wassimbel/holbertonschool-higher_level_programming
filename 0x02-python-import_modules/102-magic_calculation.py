@@ -9,4 +9,3 @@ if a < b:
 
 else:
     return sub(a, b)
-    return 0
