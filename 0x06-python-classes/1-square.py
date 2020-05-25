@@ -3,7 +3,7 @@
 """
 
 
-class square:
+class Square:
     """class that defines square
     """
     def __init__(self, size):
