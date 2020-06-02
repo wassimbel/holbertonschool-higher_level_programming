@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ module - function add_attribute """
 
