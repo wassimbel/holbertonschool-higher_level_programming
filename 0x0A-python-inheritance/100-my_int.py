@@ -6,7 +6,7 @@ module - Myint
 
 class MyInt(int):
     """ subclass MyInt """
-     def __eq__(self, inv):
+    def __eq__(self, inv):
         """eq"""
         return not super().__eq__(inv)
 
