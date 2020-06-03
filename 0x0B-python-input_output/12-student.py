@@ -17,6 +17,7 @@ class Student():
         if hasattr(self, '__dict__') and type(attrs) is list:
             for i in attrs:
                 if type(i) is str and i in self.__dict__:
-                   list[i] = self.__dict__[i]
-                   return list
-                return self.__dict__
+                    list[i] = self.__dict__[i]
+                    return list
+                else:
+                   return self.__dict__
