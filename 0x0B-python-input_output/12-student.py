@@ -14,9 +14,8 @@ class Student():
     def to_json(self, attrs=None):
         """ retrieves a dictionary  """
         list = {}
-        if hasattr(self, '__dict__') and isinstance(attrs, list):
             for i in attrs:
-                if isinstance(i, str):
+                if isinstance(i, str) and i in self.__dict__:
                     list[i] = self.__dict__[i]
             return list
         return self.__dict__
