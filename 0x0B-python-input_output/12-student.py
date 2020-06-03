@@ -1,4 +1,4 @@
-\#!/usr/bin/python3
+#!/usr/bin/python3
 """ module - class Student """
 
 
@@ -18,5 +18,5 @@ class Student():
             for i in attrs:
                 if isinstance(i, str):
                     list[i] = self.__dict__[i]
-            return list:
+            return list
         return self.__dict__
