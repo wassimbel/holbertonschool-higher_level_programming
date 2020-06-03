@@ -20,4 +20,4 @@ class Student():
                     list[i] = self.__dict__[i]
             return list
         else:
-        return self.__dict__
+            return self.__dict__
