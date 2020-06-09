@@ -3,7 +3,6 @@
 import json
 
 
-
 class Base:
     """ This class will be the “base” of all other classes in this project.
         The goal of it is to manage id attribute in all your future classes
@@ -29,8 +28,9 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ writes the JSON string representation of list_objs to a file """
-        mylist= []
-        with open(cls.__name__ + ".json", mode="w", encoding="utf-8") as myfile:
+        mylist = []
+        with open(cls.__name__ + ".json", mode="w", encoding="utf-8")
+        as myfile:
             if list_objs is None:
                 myfile.write(Base.to_json_string(mylist))
             for i in list_objs:
