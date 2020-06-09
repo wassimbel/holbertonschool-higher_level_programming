@@ -34,7 +34,7 @@ class Base:
                 file.write(Base.to_json_string(mylist))
             else:
                 for i in list_objs:
-                    mylist.append(i.__dict__)
+                    mylist.append(cls.to_dictionary(i))
                 file.write(Base.to_json_string(mylist))
 
     @staticmethod
