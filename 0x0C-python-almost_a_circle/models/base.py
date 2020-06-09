@@ -32,9 +32,10 @@ class Base:
         with open(cls.__name__ + ".json", mode="w", encoding="utf-8") as file:
             if list_objs is None:
                 file.write(Base.to_json_string(mylist))
-            for i in list_objs:
-                mylist.append(i.__dict__)
-            file.write(Base.to_json_string(mylist))
+            else:
+                for i in list_objs:
+                    mylist.append(cls.to_dictionary(i))
+                file.write(Base.to_json_string(mylist))
 
     @staticmethod
     def from_json_string(json_string):
