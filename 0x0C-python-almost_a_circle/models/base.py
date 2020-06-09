@@ -14,7 +14,7 @@ class Base:
             else increment and assign  """
         if id is not None:
             self.id = id
-        if id is None:
+        else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
@@ -29,13 +29,12 @@ class Base:
     def save_to_file(cls, list_objs):
         """ writes the JSON string representation of list_objs to a file """
         mylist = []
-        with open(cls.__name__ + ".json", mode="w", encoding="utf-8")
-        as myfile:
+        with open(cls.__name__ + ".json", mode="w", encoding="utf-8") as file:
             if list_objs is None:
-                myfile.write(Base.to_json_string(mylist))
+                file.write(Base.to_json_string(mylist))
             for i in list_objs:
                 mylist.append(i.__dict__)
-            myfile.write(Base.to_json_string(mylist))
+            file.write(Base.to_json_string(mylist))
 
     @staticmethod
     def from_json_string(json_string):
