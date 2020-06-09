@@ -56,4 +56,3 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
-
