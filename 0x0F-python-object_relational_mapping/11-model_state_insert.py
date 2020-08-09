@@ -12,7 +12,7 @@ if __name__ == "__main__":
                                    sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    new= State(name='Louisiana')
+    new = State(name='Louisiana')
     session.add(new)
     session.commit()
     print(new.id)
