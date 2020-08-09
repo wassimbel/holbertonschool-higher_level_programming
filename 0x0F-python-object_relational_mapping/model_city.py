@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ module - class City that inherits from Base """
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
+from model_state import State
 
 
 Base = declarative_base()
