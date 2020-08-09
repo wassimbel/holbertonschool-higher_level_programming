@@ -12,7 +12,7 @@ if __name__ == "__main__":
                                    sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    new = session.query(State).filter(State.id == 2)
-    new.name = "New Mexico"
+    for instance in session.query(State).filter(State.id == 2):
+        instance.name = "New Mexico"
     session.commit()
     session.close()
