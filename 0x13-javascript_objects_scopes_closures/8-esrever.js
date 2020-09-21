@@ -3,7 +3,7 @@ exports.esrever = function (list) {
 //  return list.reverse();
   let rev = [];
   let i = 0;
-  for (let j = list.length - 1; j > 0; j--, i++) {
+  for (let j = list.length - 1; j >= 0; j--, i++) {
     rev[j] = list[i];
   }
   return (rev);
