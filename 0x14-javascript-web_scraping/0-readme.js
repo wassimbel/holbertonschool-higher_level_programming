@@ -1,9 +1,11 @@
 #!/usr/bin/node
-const fs = require('fs')
+
+const fs = require('fs');
 const arg = process.argv[2];
-fs.readFileSync(arg, 'utf-8', function (err, data) {
-  if (err) {
-    console.log(err);
+
+fs.readFile(arg, 'utf-8', function (error) {
+  if (error) {
+    console.log(error);
   }
-console.log(data);
+  console.log(arg);
 });
