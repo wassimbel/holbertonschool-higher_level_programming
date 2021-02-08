@@ -10,17 +10,20 @@ email VARCHAR(256),
 phone_number INT,
 card_number VARCHAR(256),
 expiry_card DATE,
-cvv INT NOT NULL);
+cvv INT NOT NULL,
+PRIMARY KEY (id));
 
-INSERT INTO `user` (`id`, `name`, `last_name`, `email`, `phone_number`, `card_number`, `expiry_card`, `cvv`) VALUES (17,
-"John", "Jim", "jomjim@gmail.com", "258201201", "01236589785", "2000-05-21", 123);
-INSERT INTO `user` (`id`, `name`, `last_name`, `email`, `phone_number`, `card_number`, `expiry_card`, `cvv`) VALUES (18,
-"sam", "paul", "sampaul7@gmail.com", "25645454" , "0013543543" , "2000-06-01", 456);
+INSERT INTO `user` (`name`, `last_name`, `email`, `phone_number`, `card_number`, `expiry_card`, `cvv`)
+VALUES ("John", "Jim", "jomjim@gmail.com", "258201201", "01236589785", "2000-05-21", 123);
+INSERT INTO `user` (`name`, `last_name`, `email`, `phone_number`, `card_number`, `expiry_card`, `cvv`)
+VALUES ("sam", "paul", "sampaul7@gmail.com", "25645454" , "0013543543" , "2000-06-01", 456);
 
 CREATE TABLE IF NOT EXISTS movies
-(name VARCHAR(256),
+(id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(256),
 release_date DATE,
-genre VARCHAR(256));
+genre VARCHAR(256),
+PRIMARY KEY(id));
 
 INSERT INTO `movies` (`name`, `release_date`, `genre` ) VALUES ("titanic",
 "2000-04-04", "drama");
